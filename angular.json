@@ -4,8 +4,8 @@
   "newProjectRoot": "projects",
   "projects": {
     "demo-app": {
-      "root": "",
-      "sourceRoot": "src",
+      "root": "src",
+      "sourceRoot": "src/",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
