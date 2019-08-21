@@ -66,17 +66,5 @@ export const musicFiles: MusicFiles[] = [
     name: '1',
     artist: '1A',
     duration: '1:00'
-  },
-  {
-    image: '../../../assets/music-icon.png',
-    name: '1',
-    artist: '1A',
-    duration: '1:00'
-  },
-  {
-    image: '../../../assets/music-icon.png',
-    name: '1',
-    artist: '1A',
-    duration: '1:00'
   }
 ];

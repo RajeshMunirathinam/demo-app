@@ -48,3 +48,9 @@
 .div-overflow::-webkit-scrollbar {
   display: none;
 }
+
+.music-count {
+  position: absolute;
+  color: white;
+  margin: 0.5em 0 0 5em;
+}

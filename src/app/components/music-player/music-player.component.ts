@@ -12,16 +12,14 @@ export class MusicPlayerComponent implements OnInit {
   musicFiles: MusicFiles[] = [];
 
   ngOnInit() {
-    // this.musicFiles = musicFiles;
     this.getMultipleData(musicFiles);
   }
 
   playMusic(): void {
-    // console.log('Playing Music....');
   }
 
   getMultipleData(music: MusicFiles[]): void {
-    _.forEach(_.range(5), () => {
+    _.forEach(_.range(10), () => {
       this.musicFiles = _.concat(this.musicFiles, music);
     });
   }
