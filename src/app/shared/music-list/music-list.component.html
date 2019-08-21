@@ -1,0 +1,13 @@
+<div class="music-list" *ngFor="let music of musicFiles">
+  <div class="music-icon">
+      <img [src]="music.image"/>
+  </div>
+  <div class="music-second">
+    <h3>Music Name : <span>{{music.name}}</span></h3>
+    <h3>Artist : <span>{{music.artist}}</span></h3>
+    <h3>Duration : <span>{{music.duration}}</span></h3>
+  </div>
+  <div class="play-button">
+    <button (click)="playMusic()">Play</button>
+  </div>
+</div>

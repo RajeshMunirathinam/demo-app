@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MusicPlayerComponent } from './components/music-player/music-player.component';
+import { MusicListComponent } from './shared/music-list/music-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MusicPlayerComponent
+    MusicPlayerComponent,
+    MusicListComponent
   ],
   imports: [
     BrowserModule

@@ -1,18 +1,24 @@
 <div class="main">
-  <div>
-      <h2>Your Music</h2>
+  <h2 class="text-white" >Music Player</h2>
+  <div class="add-button">
+    <button (click)="getMultipleData(musicFiles)">Add Music</button>
   </div>
-  <div class="div-overflow">
+  <!-- <div class="div-overflow">
     <div class="music-list" *ngFor="let music of musicFiles">
-      <img class="music-icon  " [src]="music.image" />
+      <div class="music-icon">
+          <img [src]="music.image"/>
+      </div>
       <div class="music-second">
         <h3>Music Name : <span>{{music.name}}</span></h3>
         <h3>Artist : <span>{{music.artist}}</span></h3>
         <h3>Duration : <span>{{music.duration}}</span></h3>
       </div>
       <div class="play-button">
-        <button class="" (click)="playMusic(music)">Play</button>
+        <button (click)="playMusic(music)">Play</button>
       </div>
     </div>
+  </div> -->
+  <div class="div-overflow">
+    <app-music-list [musicFiles]="musicFiles" (onPlay)="playMusic()"></app-music-list>
   </div>
 </div>

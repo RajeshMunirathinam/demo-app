@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicFiles, musicFiles } from '../../mocks/music.mockData';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-music-player',
@@ -7,86 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MusicPlayerComponent implements OnInit {
 
-  musicFiles: any = [
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    },
-    {
-      image: '../../../assets/music-icon.png',
-      name: '1',
-      artist: '1A',
-      duration: '1:00'
-    }
-  ];
-
-  constructor() {}
+  musicFiles: MusicFiles[] = [];
 
   ngOnInit() {
+    // this.musicFiles = musicFiles;
+    this.getMultipleData(musicFiles);
   }
 
-  playMusic(music: any) {}
+  playMusic(): void {
+    // console.log('Playing Music....');
+  }
+
+  getMultipleData(music: MusicFiles[]): void {
+    _.forEach(_.range(5), () => {
+      this.musicFiles = _.concat(this.musicFiles, music);
+    });
+  }
 
 }
