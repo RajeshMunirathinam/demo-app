@@ -6,7 +6,7 @@
   <div class="add-button">
     <button (click)="getMultipleData(musicFiles)">Add Music</button>
   </div>
-  <!-- <div class="div-overflow">
+  <div class="div-overflow">
     <div class="music-list" *ngFor="let music of musicFiles">
       <div class="music-icon">
           <img [src]="music.image"/>
@@ -20,8 +20,5 @@
         <button (click)="playMusic(music)">Play</button>
       </div>
     </div>
-  </div> -->
-  <div class="div-overflow">
-    <app-music-list [musicFiles]="musicFiles" (onPlay)="playMusic()"></app-music-list>
   </div>
 </div>
