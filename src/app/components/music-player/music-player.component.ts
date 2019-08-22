@@ -16,6 +16,7 @@ export class MusicPlayerComponent implements OnInit {
   }
 
   playMusic(): void {
+    console.log('Playing Music....');
   }
 
   getMultipleData(music: MusicFiles[]): void {
